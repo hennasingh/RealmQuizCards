@@ -1,0 +1,82 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url("https://images.unsplash.com/photo-1541701494587-cb58502866ab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80");
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    font-size: 20px;
+}
+
+.title{
+    align-self: center;
+}
+
+.h1{
+    color: darkblue;
+    text-align: center;
+    background: lightskyblue;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.quizcards{
+    align-self: center;
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1%;
+    border: 3px solid dodgerblue;
+    border-radius: 15px;
+    background-color: lightblue;
+    justify-content: center;
+
+}
+.card{
+    width:250px;
+    height:250px;
+    position: relative;
+    margin:5px;
+}
+
+.front, .back{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    font-family: "Comic Sans MS";
+    border: 2px solid rosybrown;
+    border-radius: 25px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.front {
+    background: linear-gradient(#08aeea,#2af598) ;
+    z-index: 2;
+}
+
+.back {
+    background: linear-gradient(#f8da61, #ff5acd);
+    z-index: 1;
+}
+
+.card {
+    transition: 2s ease;
+    transform-style: preserve-3d;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+
+}
+.back {
+    transform: rotateY(180deg);
+}
+
+
+
+
+
